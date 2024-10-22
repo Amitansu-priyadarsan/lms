@@ -1,92 +1,57 @@
-## LMS Platform
+# 🚀 WithU - E-learning Platform for Differently-Abled Students
 
-# LMS Platform
+WithU is an innovative and accessible E-learning platform built to empower differently-abled students by providing educational resources tailored to their needs. It leverages modern web technologies to create an inclusive learning experience, ensuring education is accessible to everyone.
 
-This repository contains a faithful copy and enhancement of the LMS platform created by CodeWithAntonio in the tutorial [Learn Next & React and get Hired!](https://www.youtube.com/watch?v=Big_aFLmekI).
+# 📚 Key Features
+🔍 Course Browsing and Filtering: Easily browse and filter courses based on categories and preferences.
+💳 Course Purchase with Stripe: Seamless course purchases using Stripe integration.
+📈 Progress Tracking: Mark chapters as complete/incomplete with automatic course progress tracking.
+📊 Student Dashboard: Custom student dashboard to track learning progress.
+🎓 Teacher Mode: Allows teachers to create and manage courses with full control over chapters and materials.
+🛠️ Course Creation: Teachers can create and organize new courses and chapters.
+🔄 Drag-and-Drop Reordering: Easily reorder chapters within courses using drag-and-drop functionality.
+📂 Media Upload: Upload course materials like thumbnails, attachments, and videos using UploadThing.
+🎥 Video Processing with Mux: Video content is processed and streamed using the Mux platform for smooth playback.
+🎞️ HLS Video Player: Integrate Mux HLS streaming for a seamless video experience.
+✏️ Rich Text Editor: Manage chapter descriptions with a rich text editor for enhanced formatting.
+🔐 Authentication via Clerk: Secure user authentication using Clerk.
+🗄️ Database Management with Prisma: ORM for managing data models using Prisma.
+🛢️ MySQL Database with Planetscale: Scalable MySQL database setup using Planetscale.
+💡 Enhancements
+🔍 Search Functionality: Added a search feature to enhance the user experience on the courses page.
+💻 UI Improvements: Enhanced user interfaces for both student and teacher dashboards to improve usability.
+🎯 Planned Enhancements
+🎓 Quizmify Integration: Plan to integrate Elliot Chong’s Quizmify feature for creating and managing quizzes within the platform.
+🛠️ Usage
+To use this repository, ensure that you have Node.js and NPM installed on your machine. Once you have the necessary tools, follow these steps:
 
-## Live Demo
 
-A working version of this app is available at [https://lms.kendevco.co](https://lms.kendevco.co).
+## 🚀 Getting Started
+1. **Clone the repository**: 
+   ```bash
+   git clone https://github.com/Amitansu-priyadarsan/lms.git 
+   ```
+2. **📦 Install dependencies:
+   ```bash
+   cd lms
+   Install the dependencies: npm install 
+   ```
+3. **💻 Start the development server:
+   ```bash
+   npm run dev
+   ```
+4.🗃️ Database Setup
+To reset and push the database schema, use the following Prisma commands:
 
-## Development Status
+```bash
+Copy code
+npx prisma migrate reset
+npx prisma db push
 
-- Versions and dependencies have been updated.
-- Comments have been added and code has been tidied up.
-- Occasional reports of black screen or other issues at runtime have been received, possibly related to Clerk integration.
+```
 
-## Call for Collaboration
+5.Open your browser and visit: http://localhost:3000
 
-If you're a budding developer looking for an exciting project:
 
-- Consider contributing to [Payload Nuke](https://github.com/payloadnuke)
-- Help shape its future by contributing to the [draft constitution](https://docs.google.com/document/d/1TaYHs0CSk76xBFu5ps-2BpyWsZkS2getV41_8Q0tO34/edit?usp=sharing)
 
-**Key Features:**
 
-* Browse and filter courses
-* Purchase courses using Stripe
-* Mark chapters as completed or uncompleted
-* Progress calculation of each course
-* Student dashboard
-* Teacher mode
-* Create new courses
-* Create new chapters
-* Easily reorder chapter position with drag and drop
-* Upload thumbnails, attachments, and videos using UploadThing
-* Video processing using Mux
-* HLS Video player using Mux
-* Rich text editor for chapter description
-* Authentication using Clerk
-* ORM using Prisma
-* MySQL database using Planetscale
-
-**Enhancements:**
-
-* Added a search function to the courses page
-* Improved the user interface of the student and teacher dashboards
-
-**Planned Enhancement:**
-Integrate Elliot Chong's Quizmify into this.
-
-**Usage:**
-
-To use this repository, you will need to have Node.js and NPM installed on your machine. Once you have installed the necessary dependencies, you can clone the repository and run the following commands:
-
-**Deployment:**
-
-To deploy the application to production, you will need to sign up for accounts on the following services:
-
-Vercel https://vercel.com - for server-less hosting.
-
-Mux https://mux.com - for Videos storage. 
-
-Clerk https://clerk.com This is covered in the first hour or so of the video. It's the easiest 
-authentication available and just works. It is so simple and easy to integrate into your app at least for 
-me it is awesome. I've integrated it into my own Portfolio app https://github.com/kendevco/Portfolio https://folio.kendec.co. 
-
-MongoDB Atlas https://mongodb.com This project has deviated from Antonio's by using MongoDb.com. I've 
-found it to be much more flexible for budding NextJS developers. I've created 7 free databases there
-so far and it is perfect for my needs. I had no problems modifying the schema for use with MongoDB and 
-if you are looking for a project already adapted for Mongo - honestly the only changes were in the 
-Schema! And Copilot did all the heavy lifting.  
-
-UploadThing https://uploadthing.com/ for serverless upload storage.
-
-Stripe Payments: https://stripe.com
-
-If you need further instruction on configuring these services, they are all covered in the course
-video https://www.youtube.com/watch?v=Big_aFLmekI. 
-
-To reset the database, run 
-
-    npx prisma migrate reset
-    npx prisma db push
-
-Note that when I ran npx prisma migrate reset against mongodb.com I ran
-into errors in the terminal stating I lacked permission. However, after
-running the command I did reinitialize the database. 
-
-Note also if reinitializing the datbase you also need to run:
-node scripts/seed.ts
-
-See https://youtu.be/Big_aFLmekI?t=30748 for step-by-step
